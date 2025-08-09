@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rudra Writings - Anime Superhero Stories</title>
+<style>
+  /* General dark theme and font */
+  body {
+    margin: 0;
+    background-color: #0a0a0a;
+    color: #f1f1f1;
+    font-family: 'Arial Black', Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* Header with logo and banner */
+  header {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(90deg, #330000, #660000);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.7);
+    z-index: 1000;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+    background: url('https://i.imgur.com/EZlpKSn.png') no-repeat center center; /* Example superhero logo */
+    background-size: contain;
+    margin-right: 20px;
+    filter: drop-shadow(0 0 5px red);
+  }
+  .title {
+    font-size: 24px;
+    text-shadow: 0 0 10px #ff0000;
+    user-select: none;
+  }
+
+  /* Banner container with an image and shadow */
+  .banner {
+    margin-top: 80px; /* To avoid overlap with fixed header */
+    width: 100%;
+    height: 240px;
+    background: url('https://i.imgur.com/EnRHI0O.jpg') no-repeat center center; /* Example dark superhero banner */
+    background-size: cover;
+    box-shadow: inset 0 0 40px #900000;
+    filter: brightness(0.8);
+  }
+
+  /* Sections */
+  section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  /* Title styling for sections */
+  h2 {
+    color: #ff4537;
+    text-shadow: 0 0 10px #ff4537;
+    margin-bottom: 15px;
+  }
+
+  /* Paragraph text */
+  p {
+    line-height: 1.6;
+  }
+
+  /* Scroll Reveal Effect */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #770000;
+    font-size: 14px;
+    user-select: none;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-label="Rudra Writings Logo"></div>
+  <div class="title">Rudra Writings</div>
+</header>
+
+<div class="banner" role="img" aria-label="Dark Superhero Anime Banner"></div>
+
+<section>
+  <h2 class="fade-in">Welcome to Rudra Writings</h2>
+  <p class="fade-in">Dive into the world of anime superheroes and mysterious tales. Explore original stories filled with thrilling adventures, superpowers, and dark secrets.</p>
+</section>
+
+<section>
+  <h2 class="fade-in">Featured Stories</h2>
+  <p class="fade-in"><strong>Shadow Flame:</strong> A young hero discovers a blazing power within to fight darkness engulfing the city.</p>
+  <p class="fade-in"><strong>The Mystic Ring:</strong> An ancient artifact unlocks supernatural abilities with great responsibility.</p>
+</section>
+
+<section>
+  <h2 class="fade-in">About Me</h2>
+  <p class="fade-in">I am a passionate writer dedicated to creating gripping anime-inspired superhero stories. Join me on this journey and support my freelance work on Fiverr.</p>
+</section>
+
+<footer>
+  &copy; 2025 Rudra Writings. All rights reserved.
+</footer>
+
+<script>
+  // Scroll reveal effect for fade-in elements
+  function revealOnScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    const windowHeight = window.innerHeight;
+    elements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>
